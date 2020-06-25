@@ -7,11 +7,10 @@
 # Description: 
 
 * This code creates a classical force-field for a peptide containing 
-4-Fluorinated Proline (non-natural) residues.
+4-Fluorinated Proline (non-natural) residues. (ACE-PRF-NME by default, can be changed in tleap_script.txt)
 * You can use the code for cannonical peptides too.
-
 * Creates input files for gromacs or amber or charmm (or openMM).
-* Adds a 1nm^3 TIP3P waterbox.
+* Adds a TIP3P waterbox. (1nm^3 default, can be changed in tleap_script.txt)
 * Creates a plumed.dat file that adds pucker correction for fluorinated proline residues.
 
 * As an example you may choose the following sequence: 
