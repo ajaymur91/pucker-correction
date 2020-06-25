@@ -1,7 +1,7 @@
 #Requirements
-*Bash
-*Python 2.7 or higher
-*ParmED (https://github.com/ParmEd)
+* Bash
+* Python 2.7 or higher
+* ParmED (https://github.com/ParmEd)
 
 ##################################################################
 Usage:
