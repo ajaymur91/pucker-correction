@@ -6,7 +6,7 @@
 # See Doshi et al. J Phys Chem B 113(52):16590-5
 
 # Identify the residue numbers for PRO or F-PRO residues
-uniqArr=($(echo "printDetails :PRF,PSF,PRO" | parmed -n amber_ff/amber.prmtop | sed -n '/Reading /,$p' | tail -n +7 | tail -r | tail +3 | tail -r | awk '{print $2}' | uniq))
+uniqArr=($(echo "printDetails :PRF,PSF,PRO" | parmed -n amber_ff/amber.prmtop | sed -n '/Reading /,$p' | tail -n +7 | tac | tail +3 | tac | awk '{print $2}' | uniq))
 
 #Remove pre-existing dihedral files
 rm -f temp/dihedrals
@@ -14,7 +14,7 @@ rm -f temp/dihedrals
 #Identify the dihedral angles to mend
 for i in "${uniqArr[@]}"
 do
-echo "printDihedrals :$((i-1)) :$((i-1)) :$i :$i" | parmed -n amber_ff/amber.prmtop | sed -n '/Reading /,$p' | tail -n +3 | tail -r | tail +3 | tail -r | awk '{ print $1" "$5" "$9" "$13}' >> temp/dihedrals
+echo "printDihedrals :$((i-1)) :$((i-1)) :$i :$i" | parmed -n amber_ff/amber.prmtop | sed -n '/Reading /,$p' | tail -n +3 | tac | tail +3 | tac | awk '{ print $1" "$5" "$9" "$13}' >> temp/dihedrals
 done
 
 #Remove pre-existing parmed script file
