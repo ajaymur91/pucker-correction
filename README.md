@@ -33,6 +33,7 @@ This creates peptide configurations and force-field in amber_ff folder. The pept
 For instance, you can do
 ```
 amber=sequence{ACE PRF GLY PSF PRF NME} #(edit this inside tleap_script.txt)
+solvatebox amber TIP3PBOX 10 #(creates 1nm^3 tip3p waterbox. edit this inside tleap_script.txt)
 ```
 
 * This creates the force-field for the chosen peptide in gromacs_ff/ charmm_ff/ and amber_ff/ folders
