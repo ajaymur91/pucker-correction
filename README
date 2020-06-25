@@ -1,6 +1,13 @@
 This code creates a classical force-field for a peptide containing 
 4-Fluorinated Proline (non-natural) residues.
 
+As an example you may choose the following sequence: 
+ACE-GLY-GLY-PRF-GLY-PSF-NME
+where PRF is 4R-fluoro proline residue
+      PSF is 4S-fluoro proline residue
+
+You can choose the peptide of your choice by editing the tleap_script.txt file.
+
 ##################################################################
 Citation:
 @article{muralidharan2020solvation,
