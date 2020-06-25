@@ -3,10 +3,11 @@
 * Python 2.7 or higher
 * ParmED (https://github.com/ParmEd)
 
-# Info: 
+# Description: 
 
 * This code creates a classical force-field for a peptide containing 
-4-Fluorinated Proline (non-natural) residues. (also works for any cannonical peptide)
+4-Fluorinated Proline (non-natural) residues.
+* You can use the code for cannonical peptides too.
 
 * Creates input files for gromacs or amber or charmm (or openMM)
 * Adds a 1nm^3 TIP3P waterbox.
