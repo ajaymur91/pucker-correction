@@ -33,9 +33,7 @@ bash fix_pro_omega.sh                  # fix omega dihedrals potential barriers 
 python convert2_gmx_charmm.py          # Convert from amber to gromacs and charmm types
 bash make_pucker_correct_plumed.sh     # creates plumed.dat that adds pucker correction as external bias
 ```
-**tleap -f tleap_script.txt > tleap.LOG**
-
-creates peptide configurations and force-field in amber_ff folder. The peptide to be simulated can be editing the tleap_script.txt.
+The only thing the user has to do is edit tleap_script.txt
 
 For instance, you can do
 
@@ -43,10 +41,9 @@ For instance, you can do
 
 **solvatebox amber TIP3PBOX 10** #(creates 1nm^3 tip3p waterbox. edit this inside tleap_script.txt)
 
+* Running **bash main.sh** creates the force-field for the chosen peptide in gromacs_ff/ charmm_ff/ and amber_ff/ folders
+along with the plumed.dat file that adds the pucker correction as an external bias from **pucker_correction_data** folder
 
-* This creates the force-field for the chosen peptide in gromacs_ff/ charmm_ff/ and amber_ff/ folders
-* The user has to specify the desired peptide to be simulated in tleap_script.txt
-* Otherwise a default peptide sequence is chosen (ACE-PRF-NME)
 
 
 # Citation:
