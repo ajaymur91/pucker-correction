@@ -3,6 +3,23 @@
 * Python 2.7 or higher
 * ParmED (https://github.com/ParmEd)
 
+# Info: 
+
+* This code creates a classical force-field for a peptide containing 
+4-Fluorinated Proline (non-natural) residues. (also works for any cannonical peptide)
+
+* Creates input files for gromacs or amber or charmm (or openMM)
+* Adds a 1nm^3 TIP3P waterbox.
+* Creates a plumed.dat file that adds pucker correction for fluorinated proline residues
+
+* As an example you may choose the following sequence: 
+ACE-GLY-GLY-PRF-GLY-PSF-NME
+where PRF is 4R-fluoro proline residue
+      PSF is 4S-fluoro proline residue
+
+You can select a peptide of your choice by editing the tleap_script.txt file.
+
+
 # Usage:
 ```
 bash main.sh #(guides the user through the process)
@@ -21,20 +38,6 @@ amber=sequence{ACE PRF GLY PSF PRF NME} #(edit this inside tleap_script.txt)
 * The user has to specify the desired peptide to be simulated in tleap_script.txt
 * Otherwise a default peptide sequence is chosen (ACE-PRF-NME)
 
-# Info: 
-
-* This code creates a classical force-field for a peptide containing 
-4-Fluorinated Proline (non-natural) residues. (also works for any cannonical peptide)
-
-* Creates input files for gromacs or amber or charmm (or openMM)
-* Adds a 1nm^3 TIP3P waterbox.
-
-* As an example you may choose the following sequence: 
-ACE-GLY-GLY-PRF-GLY-PSF-NME
-where PRF is 4R-fluoro proline residue
-      PSF is 4S-fluoro proline residue
-
-You can select a peptide of your choice by editing the tleap_script.txt file.
 
 # Citation:
 @article{muralidharan2020solvation,
