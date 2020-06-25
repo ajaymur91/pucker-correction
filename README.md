@@ -1,12 +1,32 @@
-This code creates a classical force-field for a peptide containing 
-4-Fluorinated Proline (non-natural) residues.
+```
+#Requirements:
+```
+Bash
+Python 2.7 or higher
+ParmED (https://github.com/ParmEd)
 
-As an example you may choose the following sequence: 
+##################################################################
+Usage:
+
+* Executing main.sh guides the user through the process.
+* This creates the force-field for the chosen peptide in gromacs_ff/ charmm_ff/ and amber_ff/ folders
+* The user has to specify the desired peptide to be simulated in tleap_script.txt
+* Otherwise a default peptide sequence is chosen (ACE-PRF-NME)
+##################################################################
+Info: 
+
+* This code creates a classical force-field for a peptide containing 
+4-Fluorinated Proline (non-natural) residues. (also works for any cannonical peptide)
+
+* Creates input files for gromacs or amber or charmm (or openMM)
+* Adds a 1nm^3 TIP3P waterbox.
+
+* As an example you may choose the following sequence: 
 ACE-GLY-GLY-PRF-GLY-PSF-NME
 where PRF is 4R-fluoro proline residue
       PSF is 4S-fluoro proline residue
 
-You can choose the peptide of your choice by editing the tleap_script.txt file.
+You can select a peptide of your choice by editing the tleap_script.txt file.
 
 ##################################################################
 Citation:
@@ -18,18 +38,5 @@ Citation:
   publisher={https://www.biorxiv.org/content/10.1101/2020.05.11.088963v2.full}
 }
 
-##################################################################
-Requirements:
 
-Bash
-Python
-ParmED (https://github.com/ParmEd)
-##################################################################
-Usage:
-
-* Executing main.sh guides the user through the process.
-* This creates the force-field for the chosen peptide in gromacs_ff/* charmm_ff/* and amber_ff/*
-* The user has to specify the desired peptide to be simulated in tleap_script.sh
-* Otherwise a default peptide sequence is chosen (ACE-PRF-NME)
-##################################################################
 
