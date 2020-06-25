@@ -34,10 +34,13 @@ python convert2_gmx_charmm.py          # Convert from amber to gromacs and charm
 bash make_pucker_correct_plumed.sh     # creates plumed.dat that adds pucker correction as external bias
 ```
 **tleap -f tleap_script.txt > tleap.LOG**
+
 creates peptide configurations and force-field in amber_ff folder. The peptide to be simulated can be editing the tleap_script.txt.
 
 For instance, you can do
+
 **amber=sequence{ACE PRF GLY PSF PRF NME}** #(edit this inside tleap_script.txt)
+
 **solvatebox amber TIP3PBOX 10** #(creates 1nm^3 tip3p waterbox. edit this inside tleap_script.txt)
 
 
