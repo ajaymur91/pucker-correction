@@ -1,0 +1,9 @@
+deleteDihedral @6 @5 @7 @8
+adddihedral @6 @5 @7 @8 3.5000 2.0000 180.000
+deleteDihedral @6 @5 @7 @17
+adddihedral @6 @5 @7 @17 3.5000 2.0000 180.000
+deleteDihedral @2 @5 @7 @8
+adddihedral @2 @5 @7 @8 3.5000 2.0000 180.000
+deleteDihedral @2 @5 @7 @17
+adddihedral @2 @5 @7 @17 3.5000 2.0000 180.000
+outparm amber_ff/amber.prmtop

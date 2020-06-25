@@ -1,0 +1,84 @@
+-I: Adding /miniconda3/dat/leap/prep to search path.
+-I: Adding /miniconda3/dat/leap/lib to search path.
+-I: Adding /miniconda3/dat/leap/parm to search path.
+-I: Adding /miniconda3/dat/leap/cmd to search path.
+-f: Source tleap_script.txt.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./tleap_script.txt
+----- Source: /miniconda3/dat/leap/cmd/leaprc.protein.ff14sb
+----- Source of /miniconda3/dat/leap/cmd/leaprc.protein.ff14sb done
+Log file: ./leap.log
+Loading parameters: /miniconda3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /miniconda3/dat/leap/parm/frcmod.ff14SB
+Reading force field modification type file (frcmod)
+Reading title:
+ff14SB protein backbone and sidechain parameters
+Loading library: /miniconda3/dat/leap/lib/amino12.lib
+Loading library: /miniconda3/dat/leap/lib/aminoct12.lib
+Loading library: /miniconda3/dat/leap/lib/aminont12.lib
+----- Source: /miniconda3/dat/leap/cmd/leaprc.water.tip3p
+----- Source of /miniconda3/dat/leap/cmd/leaprc.water.tip3p done
+Loading library: /miniconda3/dat/leap/lib/atomic_ions.lib
+Loading library: /miniconda3/dat/leap/lib/solvents.lib
+Loading parameters: /miniconda3/dat/leap/parm/frcmod.tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+This is the additional/replacement parameter set for TIP3P water
+Loading parameters: /miniconda3/dat/leap/parm/frcmod.ions1lm_126_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of monovalent ions for TIP3P water model (12-6 normal usage set)
+Loading parameters: /miniconda3/dat/leap/parm/frcmod.ionsjc_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Monovalent ion parameters for Ewald and TIP3P water from Joung & Cheatham JPCB (2008)
+Loading parameters: /miniconda3/dat/leap/parm/frcmod.ions234lm_126_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of divalent to tetravalent ions for TIP3P water model (12-6 normal usage set)
+Loading Prep file: ./tleap_prep/rf.prepin
+Loading Prep file: ./tleap_prep/sf.prepin
+Loading parameters: ./tleap_prep/F.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Force field parameters from rf2.prmtop
+  Solute vdw bounding box:              10.288 8.934 7.544
+  Total bounding box for atom centers:  30.288 28.934 27.544
+  Solvent unit box:                     18.774 18.774 18.774
+  Total vdw box size:                   32.955 32.158 30.276 angstroms.
+  Volume: 32085.586 A^3 
+  Total mass 12511.148 amu,  Density 0.648 g/cc
+  Added 684 residues.
+Writing pdb file: amber_ff/amber.pdb
+   printing CRYST1 record to PDB file with box info
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+old PREP-specified impropers:
+ <PRF 2>:  -M   CA   N    CD  
+ <PRF 2>:  CA   +M   C    O   
+ total 4 improper torsions applied
+ 2 improper torsions in old prep form
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	WAT	684
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 0; Notes = 0.

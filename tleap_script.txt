@@ -1,0 +1,33 @@
+#Load Amberff14sb and TIP3P waters
+source leaprc.protein.ff14sb
+source leaprc.water.tip3p
+
+#Load Amber prepi files for the fluorinated proline residues
+loadamberprep ./tleap_prep/rf.prepin
+loadamberprep ./tleap_prep/sf.prepin
+
+# Load gaff2 for bond, angle and dihedrals containing fluorine
+# Load vdw parameters for F and Hf (H bonded to fluorinated carbon) - Robalo et al. Phys. Chem. Chem. Phys., 2019,21, 2029-2038
+loadamberparams ./tleap_prep/F.frcmod
+
+#####################################################################
+# User can choose the peptide to simulate below 
+#####################################################################
+#Example 1 (Simple 4R fluorinated Proline dipeptide) (RF in short)
+amber=sequence{ACE PRF NME}
+ 
+#Example 2 (Simple 4S fluorinated Proline dipeptide) (SF in short)
+#amber=sequence{ACE PSF NME}
+
+#Example 3 (Tetrapeptide)
+#amber=sequence{ACE PRF PRF PSF NME}
+#####################################################################
+
+#Add waters 
+solvatebox amber TIP3PBOX 10
+
+#save pdb and amber topologies
+savepdb amber amber_ff/amber.pdb
+saveamberparm amber amber_ff/amber.prmtop amber_ff/amber.inpcrd
+
+quit

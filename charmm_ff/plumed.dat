@@ -1,0 +1,3 @@
+PUCKERING ATOMS=8,7,17,14,11 LABEL=p_rf1
+EXTERNAL ARG=p_rf1.Zx,p_rf1.Zy FILE=./pucker_correction_data/RF-correct.dat LABEL=ext_prf1
+ 
