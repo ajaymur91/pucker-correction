@@ -1,17 +1,17 @@
 #!/bin/bash
 
-echo "printdetails :PRF@CD" | parmed -n amber_ff/amber.prmtop | sed -n '/Reading /,$p' | tail -n +6 | tac | tail +3 | tac | awk '{print $1}' > temp/RF_CD
-echo "printdetails :PRF@N"  | parmed -n amber_ff/amber.prmtop | sed -n '/Reading /,$p' | tail -n +6 | tac | tail +3 | tac | awk '{print $1}' > temp/RF_N
-echo "printdetails :PRF@CA" | parmed -n amber_ff/amber.prmtop | sed -n '/Reading /,$p' | tail -n +6 | tac | tail +3 | tac | awk '{print $1}' > temp/RF_CA
-echo "printdetails :PRF@CB" | parmed -n amber_ff/amber.prmtop | sed -n '/Reading /,$p' | tail -n +6 | tac | tail +3 | tac | awk '{print $1}' > temp/RF_CB
-echo "printdetails :PRF@CG" | parmed -n amber_ff/amber.prmtop | sed -n '/Reading /,$p' | tail -n +6 | tac | tail +3 | tac | awk '{print $1}' > temp/RF_CG
+echo "printdetails :PRF@CD" | parmed -n amber_ff/amber.prmtop | sed -n '/Reading /,$p' | tail -n +6 | sed '1!G;h;$!d' | tail -n +3 | sed '1!G;h;$!d' | awk '{print $1}' > temp/RF_CD
+echo "printdetails :PRF@N"  | parmed -n amber_ff/amber.prmtop | sed -n '/Reading /,$p' | tail -n +6 | sed '1!G;h;$!d' | tail -n +3 | sed '1!G;h;$!d' | awk '{print $1}' > temp/RF_N
+echo "printdetails :PRF@CA" | parmed -n amber_ff/amber.prmtop | sed -n '/Reading /,$p' | tail -n +6 | sed '1!G;h;$!d' | tail -n +3 | sed '1!G;h;$!d' | awk '{print $1}' > temp/RF_CA
+echo "printdetails :PRF@CB" | parmed -n amber_ff/amber.prmtop | sed -n '/Reading /,$p' | tail -n +6 | sed '1!G;h;$!d' | tail -n +3 | sed '1!G;h;$!d' | awk '{print $1}' > temp/RF_CB
+echo "printdetails :PRF@CG" | parmed -n amber_ff/amber.prmtop | sed -n '/Reading /,$p' | tail -n +6 | sed '1!G;h;$!d' | tail -n +3 | sed '1!G;h;$!d' | awk '{print $1}' > temp/RF_CG
 paste temp/RF_CD temp/RF_N temp/RF_CA temp/RF_CB temp/RF_CG > temp/RF-all ; rm temp/RF_*
 
-echo "printdetails :PSF@CD" | parmed -n amber_ff/amber.prmtop | sed -n '/Reading /,$p' | tail -n +6 | tac | tail +3 | tac | awk '{print $1}' > temp/SF_CD
-echo "printdetails :PSF@N"  | parmed -n amber_ff/amber.prmtop | sed -n '/Reading /,$p' | tail -n +6 | tac | tail +3 | tac | awk '{print $1}' > temp/SF_N
-echo "printdetails :PSF@CA" | parmed -n amber_ff/amber.prmtop | sed -n '/Reading /,$p' | tail -n +6 | tac | tail +3 | tac | awk '{print $1}' > temp/SF_CA
-echo "printdetails :PSF@CB" | parmed -n amber_ff/amber.prmtop | sed -n '/Reading /,$p' | tail -n +6 | tac | tail +3 | tac | awk '{print $1}' > temp/SF_CB
-echo "printdetails :PSF@CG" | parmed -n amber_ff/amber.prmtop | sed -n '/Reading /,$p' | tail -n +6 | tac | tail +3 | tac | awk '{print $1}' > temp/SF_CG
+echo "printdetails :PSF@CD" | parmed -n amber_ff/amber.prmtop | sed -n '/Reading /,$p' | tail -n +6 | sed '1!G;h;$!d' | tail -n +3 | sed '1!G;h;$!d' | awk '{print $1}' > temp/SF_CD
+echo "printdetails :PSF@N"  | parmed -n amber_ff/amber.prmtop | sed -n '/Reading /,$p' | tail -n +6 | sed '1!G;h;$!d' | tail -n +3 | sed '1!G;h;$!d' | awk '{print $1}' > temp/SF_N
+echo "printdetails :PSF@CA" | parmed -n amber_ff/amber.prmtop | sed -n '/Reading /,$p' | tail -n +6 | sed '1!G;h;$!d' | tail -n +3 | sed '1!G;h;$!d' | awk '{print $1}' > temp/SF_CA
+echo "printdetails :PSF@CB" | parmed -n amber_ff/amber.prmtop | sed -n '/Reading /,$p' | tail -n +6 | sed '1!G;h;$!d' | tail -n +3 | sed '1!G;h;$!d' | awk '{print $1}' > temp/SF_CB
+echo "printdetails :PSF@CG" | parmed -n amber_ff/amber.prmtop | sed -n '/Reading /,$p' | tail -n +6 | sed '1!G;h;$!d' | tail -n +3 | sed '1!G;h;$!d' | awk '{print $1}' > temp/SF_CG
 paste temp/SF_CD temp/SF_N temp/SF_CA temp/SF_CB temp/SF_CG > temp/SF-all ; rm temp/SF_*
 
 perl -pne 's/[^\S\n]+/,/g' < temp/RF-all > temp/RF-ALL2
