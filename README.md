@@ -9,9 +9,9 @@
 4-Fluorinated Proline (non-natural) residues.
 * You can use the code for cannonical peptides too.
 
-* Creates input files for gromacs or amber or charmm (or openMM)
+* Creates input files for gromacs or amber or charmm (or openMM).
 * Adds a 1nm^3 TIP3P waterbox.
-* Creates a plumed.dat file that adds pucker correction for fluorinated proline residues
+* Creates a plumed.dat file that adds pucker correction for fluorinated proline residues.
 
 * As an example you may choose the following sequence: 
 ACE-GLY-GLY-PRF-GLY-PSF-NME
