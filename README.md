@@ -29,13 +29,17 @@ bash main.sh #(guides the user through the process)
 main.sh calls several scripts in the following order:
 ```
 tleap -f tleap_script.txt > tleap.LOG 
+bash fix_pro_omega.sh
+python convert2_gmx_charmm.py
+bash make_pucker_correct_plumed.sh
 ```
-This creates peptide configurations and force-field in amber_ff folder. The peptide to be simulated can be editing the tleap_script.txt.
+*tleap -f tleap_script.txt > tleap.LOG* 
+creates peptide configurations and force-field in amber_ff folder. The peptide to be simulated can be editing the tleap_script.txt.
+
 For instance, you can do
-```
-amber=sequence{ACE PRF GLY PSF PRF NME} #(edit this inside tleap_script.txt)
-solvatebox amber TIP3PBOX 10 #(creates 1nm^3 tip3p waterbox. edit this inside tleap_script.txt)
-```
+*amber=sequence{ACE PRF GLY PSF PRF NME}* #(edit this inside tleap_script.txt)
+*solvatebox amber TIP3PBOX 10* #(creates 1nm^3 tip3p waterbox. edit this inside tleap_script.txt)
+
 
 * This creates the force-field for the chosen peptide in gromacs_ff/ charmm_ff/ and amber_ff/ folders
 * The user has to specify the desired peptide to be simulated in tleap_script.txt
