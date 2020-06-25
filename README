@@ -1,3 +1,19 @@
+##################################################################
+Requirements:
+
+Bash
+Python
+ParmED (https://github.com/ParmEd)
+
+##################################################################
+Usage:
+
+* Executing main.sh guides the user through the process.
+* This creates the force-field for the chosen peptide in gromacs_ff/* charmm_ff/* and amber_ff/*
+* The user has to specify the desired peptide to be simulated in tleap_script.txt
+* Otherwise a default peptide sequence is chosen (ACE-PRF-NME)
+##################################################################
+
 This code creates a classical force-field for a peptide containing 
 4-Fluorinated Proline (non-natural) residues.
 
@@ -18,18 +34,5 @@ Citation:
   publisher={https://www.biorxiv.org/content/10.1101/2020.05.11.088963v2.full}
 }
 
-##################################################################
-Requirements:
 
-Bash
-Python
-ParmED (https://github.com/ParmEd)
-##################################################################
-Usage:
-
-* Executing main.sh guides the user through the process.
-* This creates the force-field for the chosen peptide in gromacs_ff/* charmm_ff/* and amber_ff/*
-* The user has to specify the desired peptide to be simulated in tleap_script.txt
-* Otherwise a default peptide sequence is chosen (ACE-PRF-NME)
-##################################################################
 
