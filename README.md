@@ -28,17 +28,17 @@ bash main.sh #(guides the user through the process)
 ```
 main.sh calls several scripts in the following order:
 ```
-tleap -f tleap_script.txt > tleap.LOG 
-bash fix_pro_omega.sh
-python convert2_gmx_charmm.py
-bash make_pucker_correct_plumed.sh
+tleap -f tleap_script.txt > tleap.LOG  # create peptide based on tleap script 
+bash fix_pro_omega.sh                  # fix omega dihedrals potential barriers for Xaa-Pro peptide bonds (This is optional)  
+python convert2_gmx_charmm.py          # Convert from amber to gromacs and charmm types
+bash make_pucker_correct_plumed.sh     # creates plumed.dat that adds pucker correction as external bias
 ```
 *tleap -f tleap_script.txt > tleap.LOG* 
 creates peptide configurations and force-field in amber_ff folder. The peptide to be simulated can be editing the tleap_script.txt.
 
 For instance, you can do
-*amber=sequence{ACE PRF GLY PSF PRF NME}* #(edit this inside tleap_script.txt)
-*solvatebox amber TIP3PBOX 10* #(creates 1nm^3 tip3p waterbox. edit this inside tleap_script.txt)
+**amber=sequence{ACE PRF GLY PSF PRF NME}** #(edit this inside tleap_script.txt)
+**solvatebox amber TIP3PBOX 10** #(creates 1nm^3 tip3p waterbox. edit this inside tleap_script.txt)
 
 
 * This creates the force-field for the chosen peptide in gromacs_ff/ charmm_ff/ and amber_ff/ folders
