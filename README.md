@@ -1,17 +1,16 @@
-#Requirements
+# Requirements
 * Bash
 * Python 2.7 or higher
 * ParmED (https://github.com/ParmEd)
 
-##################################################################
-Usage:
+# Usage:
 
 * Executing main.sh guides the user through the process.
 * This creates the force-field for the chosen peptide in gromacs_ff/ charmm_ff/ and amber_ff/ folders
 * The user has to specify the desired peptide to be simulated in tleap_script.txt
 * Otherwise a default peptide sequence is chosen (ACE-PRF-NME)
-##################################################################
-Info: 
+
+# Info: 
 
 * This code creates a classical force-field for a peptide containing 
 4-Fluorinated Proline (non-natural) residues. (also works for any cannonical peptide)
