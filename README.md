@@ -5,8 +5,14 @@
 
 # Usage:
 ```
-bash main.sh (guides the user through the process)
+bash main.sh #(guides the user through the process)
 ```
+main.sh calls several scripts in the following order:
+```
+tleap -f tleap_script.txt > tleap.LOG 
+```
+This creates peptide configuration and Amber configurations and force-field in amber_ff/
+
 * This creates the force-field for the chosen peptide in gromacs_ff/ charmm_ff/ and amber_ff/ folders
 * The user has to specify the desired peptide to be simulated in tleap_script.txt
 * Otherwise a default peptide sequence is chosen (ACE-PRF-NME)
@@ -26,8 +32,7 @@ where PRF is 4R-fluoro proline residue
 
 You can select a peptide of your choice by editing the tleap_script.txt file.
 
-##################################################################
-Citation:
+# Citation:
 @article{muralidharan2020solvation,
   title={A solvation induced ring puckering effect in fluorinated prolines and its inclusion in classical force-fields},
   author={Muralidharan, A and Schmidt, JR and Yethiraj, A},
