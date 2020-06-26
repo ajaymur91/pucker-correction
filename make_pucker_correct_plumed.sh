@@ -21,9 +21,9 @@ rm -f gromacs_ff/plumed.dat;
 rm -f amber_ff/plumed.dat;
 rm -f charmm_ff/plumed.dat;
 
-i=1; while read p; do echo "PUCKERING ATOMS=$p LABEL=p_rf$i" >> plumed.dat; echo "EXTERNAL ARG=p_rf$i.Zx,p_rf$i.Zy FILE=./pucker_correction_data/RF-correct.dat LABEL=ext_prf$i">>plumed.dat; echo " ">>plumed.dat ; i=$((i+1)); done<temp/RF-ALL2
+i=1; while read p; do echo "PUCKERING ATOMS=$p LABEL=p_rf$i" >> plumed.dat; echo "EXTERNAL ARG=p_rf$i.Zx,p_rf$i.Zy FILE=../pucker_correction_data/RF-correct.dat LABEL=ext_prf$i">>plumed.dat; echo " ">>plumed.dat ; i=$((i+1)); done<temp/RF-ALL2
 
-i=1; while read p; do echo "PUCKERING ATOMS=$p LABEL=p_sf$i" >> plumed.dat; echo "EXTERNAL ARG=p_sf$i.Zx,p_sf$i.Zy FILE=./pucker_correction_data/SF-correct.dat LABEL=ext_psf$i">>plumed.dat; echo " ">>plumed.dat ; i=$((i+1)); done<temp/SF-ALL2
+i=1; while read p; do echo "PUCKERING ATOMS=$p LABEL=p_sf$i" >> plumed.dat; echo "EXTERNAL ARG=p_sf$i.Zx,p_sf$i.Zy FILE=../pucker_correction_data/SF-correct.dat LABEL=ext_psf$i">>plumed.dat; echo " ">>plumed.dat ; i=$((i+1)); done<temp/SF-ALL2
 
 cp plumed.dat charmm_ff/
 cp plumed.dat amber_ff/
