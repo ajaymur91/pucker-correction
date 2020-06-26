@@ -20,7 +20,7 @@ where PRF is 4R-fluoro proline residue
 
 You can select a peptide of your choice by editing the tleap_script.txt file.
 
-![Alt text](code.png/code.png.001.png?raw=true "Title")
+![Alt text](code.png?raw=true "Title")
 
 # Usage:
 ```
