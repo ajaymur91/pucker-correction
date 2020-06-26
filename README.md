@@ -49,7 +49,7 @@ For instance, you can do
 * Running **bash main.sh** creates the force-field for the chosen peptide in gromacs_ff/ charmm_ff/ and amber_ff/ folders
 along with the plumed.dat file that adds the pucker correction as an external bias from **pucker_correction_data** folder
 
-* to implement the ring puckering correction as external bias, you will need to patch your MD code (gromacs/ amber/ openMM) with Plumed (https://github.com/plumed/plumed2). The simplest way to do this might be using spack package manager. https://github.com/spack/spack
+* to implement the ring puckering correction as external bias, you will need to patch your MD code (gromacs/ amber/ openMM) with Plumed (https://github.com/plumed/plumed2). The simplest way to do this (for gromacs atleast) is to use spack package manager. https://github.com/spack/spack
 For example, installing gromacs patched with plumed is as easy as:
 ```
 spack install gromacs +plumed
