@@ -60,5 +60,8 @@ along with the plumed.dat file that adds the pucker correction as an external bi
   
 }
 
-
+# Slides (Talk at APS)
+https://doi.org/10.6084/m9.figshare.12302780
+or
+https://absuploads.aps.org/presentation.cfm?pid=18448
 
