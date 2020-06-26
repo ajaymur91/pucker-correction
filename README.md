@@ -56,7 +56,7 @@ along with the plumed.dat file that adds the pucker correction as an external bi
   
   year={2020},
   
-  publisher={https://www.biorxiv.org/content/10.1101/2020.05.11.088963v2.full}
+  publisher={https://www.biorxiv.org/content/10.1101/2020.05.11.088963v2}
   
 }
 
