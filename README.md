@@ -1,7 +1,7 @@
 # Requirements:
 * Bash
 * Python 2.7 or higher
-* Ambertools (tleap)
+* Ambertools (tleap) https://ambermd.org/AmberTools.php
 * ParmED (https://github.com/ParmEd)
 
 # Description: 
