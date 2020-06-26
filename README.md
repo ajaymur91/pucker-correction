@@ -1,3 +1,4 @@
+[![DOI](https://website-p-eu.figstatic.com/assets/632e9a61153ddae07772b5e901a65e4d002e3c93/public/global/images/full-logo.png)](https://doi.org/10.6084/m9.figshare.12568550.v2)
 # Requirements:
 * Bash
 * Python 2.7 or higher
