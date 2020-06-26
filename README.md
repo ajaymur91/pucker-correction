@@ -13,10 +13,13 @@
 * Adds a TIP3P waterbox. (1nm^3 default, can be changed in tleap_script.txt)
 * Creates a plumed.dat file that adds pucker correction for fluorinated proline residues.
 
-* As an example you may choose the following sequence: 
-ACE-GLY-GLY-PRF-GLY-PSF-NME
-where PRF is 4R-fluoro proline residue
-      PSF is 4S-fluoro proline residue
+* As an example you may choose the following sequence (shown in snapshot below): 
+ACE-GLY-GLY-PRF-GLY-GLY-NME
+
+Code supports the following 4-fluorinated prolines:
+* PRF is 4R-fluoro proline residue
+* PSF is 4S-fluoro proline residue
+
 
 You can select a peptide of your choice by editing the tleap_script.txt file.
 
@@ -37,7 +40,7 @@ The only thing the user has to do is edit tleap_script.txt
 
 For instance, you can do
 
-**amber=sequence{ACE PRF GLY PSF PRF NME}** #(edit this inside tleap_script.txt)
+**amber=sequence{ACE GLY GLY PSF PRF NME}** #(edit this inside tleap_script.txt)
 
 **solvatebox amber TIP3PBOX 10** #(creates 1nm^3 tip3p waterbox. edit this inside tleap_script.txt)
 
