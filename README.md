@@ -48,11 +48,16 @@ along with the plumed.dat file that adds the pucker correction as an external bi
 
 # Citation:
 @article{muralidharan2020solvation,
+
   title={A solvation induced ring puckering effect in fluorinated prolines and its inclusion in classical force-fields},
   author={Muralidharan, A and Schmidt, JR and Yethiraj, A},
+  
   journal={bioRxiv},
+  
   year={2020},
+  
   publisher={https://www.biorxiv.org/content/10.1101/2020.05.11.088963v2.full}
+  
 }
 
 
