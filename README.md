@@ -1,8 +1,9 @@
 # Requirements:
 * Bash
 * Python 2.7 or higher
-* Ambertools (tleap) https://ambermd.org/AmberTools.php
-* ParmED (https://github.com/ParmEd)
+* Ambertools https://ambermd.org/AmberTools.php (tleap program) 
+* ParmED https://github.com/ParmEd
+* Plumed https://github.com/plumed/plumed2 (for adding ring puckering correction as external bias)
 
 # Description: 
 
