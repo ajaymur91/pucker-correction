@@ -11,10 +11,6 @@ This code creates a classical force-field for a peptide containing
 Code supports the following 4-fluorinated prolines:
 * PRF is 4R-fluoro proline residue
 * PSF is 4S-fluoro proline residue
-
-As an example you may choose the following sequence (shown in snapshot below): 
-ACE-GLY-GLY-PRF-GLY-GLY-NME
-
 * All canonical amino acid residues are available too.
 * Code also adds a TIP3P waterbox. (1nm^3 default, can be changed in tleap_script.txt)
 * Creates force-field parameters and starting configurations for gromacs, amber and charmm (or openMM).
