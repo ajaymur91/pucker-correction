@@ -1,5 +1,5 @@
 #Load Amberff14sb and TIP3P waters
-source leaprc.protein.ff14sb
+source leaprc.protein.ff14SB
 source leaprc.water.tip3p
 
 #Load Amber prepi files for the fluorinated proline residues
